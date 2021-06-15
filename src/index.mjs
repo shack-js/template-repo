@@ -7,11 +7,9 @@ import { execFile } from 'child_process'
 import promisify from './promisify.mjs'
 
 export default async (config = {}, template = '', target = '', log = console.log) => {
-  let gitPath = join(tmpdir(), 'tmpl_' + new Date().getMilliseconds())
+  let gitPath = join(tmpdir(), 'tmpl_' + (new Date() + 1))
   log('start downloading...', gitPath)
-  if (!template) throw 'template cannot be empty, shall be `repository` ' +
-    'format in https://www.npmjs.com/package/download-git-repo'
-  console.log({ template })
+  if (!template) throw 'template needs to be a git repo'
   await promisify(execFile)('git', ['clone', template, gitPath])
 
   // recursively template
