@@ -1,4 +1,5 @@
-export default fn => (...args) => new Promise((resolve, reject) => {
-  console.log(args)
-  fn(...args, (err, ...rtn) => err ? reject(err) : resolve(rtn))
-})
+export default function promisify(fn) {
+  return (...args) => new Promise((resolve, reject) => {
+    fn(...args, (err, ...results) => err ? reject(err) : resolve(results))
+  })
+}

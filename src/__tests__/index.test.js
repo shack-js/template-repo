@@ -1,12 +1,13 @@
 import tpl from '../index.mjs'
-import { join, resolve } from 'path'
+import { join, resolve, dirname } from 'path'
 import fs from 'fs-extra'
 
 test('mainly works', async () => {
   const name = 'test-app'
-  let target = resolve(name)
+  let target = join(resolve(dirname('')), name)
+  await fs.ensureDir(target)
   await fs.remove(target)
-  await tpl({ name }, `shack-js/template-basic`, target)
+  await tpl({ name }, `https://github.com/shack-js/template-basic.git`, target)
   let pkg = await fs.readJSON(join(target, 'package.json'))
   expect(pkg.name).toBe(name)
-},60000*5)
+}, 1000 * 60 * 5)
