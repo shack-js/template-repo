@@ -7,7 +7,7 @@ import { execFile } from 'child_process'
 import promisify from './promisify.mjs'
 
 export default async (config = {}, template = '', target = '', log = console.log) => {
-  let gitPath = join(tmpdir(), 'tmpl_' + (new Date() + 1))
+  let gitPath = join(tmpdir(), 'tmpl_' + (1 * new Date()))
   log('start downloading...', gitPath)
   if (!template) throw 'template needs to be a git repo'
   await promisify(execFile)('git', ['clone', template, gitPath])
