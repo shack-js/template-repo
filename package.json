@@ -1,0 +1,30 @@
+{
+  "name": "@shack-js/template-repo",
+  "version": "1.0.0",
+  "description": "make templating projects easy",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shack-js/template-repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shack-js/template-repo/issues"
+  },
+  "homepage": "https://github.com/shack-js/template-repo#readme",
+  "dependencies": {
+    "download-git-repo": "^3.0.2",
+    "ejs": "^3.1.6",
+    "fs-extra": "^10.0.0",
+    "tmp": "^0.2.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.4"
+  }
+}
