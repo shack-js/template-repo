@@ -1,6 +1,6 @@
 {
   "name": "@shack-js/template-repo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "make templating projects easy",
   "main": "src/index.mjs",
   "type": "module",
