@@ -9,7 +9,7 @@ npm i @shack-js/template-repo
 ```
 
 ```
-import tpl from '../index.mjs'
+import tpl from '@shack-js/template-repo'
 
 ...
   await tpl(
@@ -20,3 +20,15 @@ import tpl from '../index.mjs'
 ...
 
 ```
+
+## template standard
+
+```
++-- defaults.json // default values
++-- ejs.json // ejs options
++-- template // files to be templated
+     +-- ...
+          +-- ...
+     +-- ...
+```
+
