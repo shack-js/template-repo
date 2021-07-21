@@ -1,6 +1,6 @@
-import tpl from '../index.mjs'
+import tpl from '../index'
 import { join } from 'path'
-import fs from 'fs-extra'
+import * as fs from 'fs-extra'
 
 test('mainly works', async () => {
   const name = 'test-app'

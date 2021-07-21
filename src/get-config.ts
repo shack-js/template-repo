@@ -1,11 +1,11 @@
-import fs from 'fs-extra'
+import * as fs from 'fs-extra'
 import { join } from 'path'
 
-const candidates = [
+const candidates: [string, (x) => {}][] = [
   ['defaults.json', async file => await fs.readJSON(file)]
 ]
 
-export default async dir => {
+export default async (dir) => {
   for (let [name, fn] of candidates) {
     let file = join(dir, name)
     if (!await fs.pathExists(file)) continue

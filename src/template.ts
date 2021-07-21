@@ -1,4 +1,4 @@
-import fs from 'fs-extra'
+import * as fs from 'fs-extra'
 import { render } from 'ejs'
 import { join } from 'path'
 
